@@ -1,0 +1,70 @@
+{% extends "projects_intro_html/base_intro_proj.html" %} 
+
+{% block body %}
+
+<!-- top-bar -->
+<div class="top-bar">
+  <h1>Number Recognition System</h1>
+  <p>
+    <a href="{{ url_for('home_route') }}">Home</a> /
+    <a href="{{ url_for('portfolio_route') }}">portfolio</a> / Number Recognition System
+  </p>
+</div>
+<!-- end top-bar -->
+
+<!-- main-container -->
+<div class="container main-container">
+  <div class="col-md-12">
+    <img
+      src="../../static/img/gif/ten.gif"
+      alt=""
+      class="img-responsive"
+      height="150"
+      width="150"
+    />
+    <div class="h-30"></div>
+  </div>
+
+  <div class="col-md-12">
+    <h3 class="text-uppercase">Number Recognition System</h3>
+    <h5>CNN on MNIST Dataset</h5>
+    <div class="h-30"></div>
+  </div>
+
+  <div class="col-md-9">
+    <p>
+      The Project is developed over the MNIST dataset. This dataset consists of
+      greyscale images of the numbers ranging between 0-9. The project was
+      developed by using one of the deep learning method- "Convulational Neural
+      Network".
+    </p>
+
+    <p>
+      The project is a web appplication that lets the user draw the images and
+      then recognizes which number is it.
+    </p>
+
+    <a href="http://prakharjain.org/nrs/" class="a_view_live" target="_blank"
+      ><em class="view_live"><b>View Live</b></em>
+    </a>
+    <a href="#" class="a_view_live" target="_blank"
+      ><em class="view_live"><b>View Code</b></em>
+    </a>
+  </div>
+
+  <div class="col-md-3">
+    <ul class="cat-ul">
+      <li><i class="ion-ios-circle-filled"></i> Deep Learning</li>
+      <li>
+        <i class="ion-ios-circle-filled"></i> Convulational Neural Network
+      </li>
+      <li><i class="ion-ios-circle-filled"></i> Tensorflow/Keras</li>
+      <li><i class="ion-ios-circle-filled"></i> Python | Flask</li>
+      <li><i class="ion-ios-circle-filled"></i> Pandas | Numpy | Matplotlib</li>
+      <li><i class="ion-ios-circle-filled"></i> Pillow | Open-CV</li>
+      <li><i class="ion-ios-circle-filled"></i> IO | Base64</li>
+      <li><i class="ion-ios-circle-filled"></i> HTML | CSS | Javascript</li>
+    </ul>
+
+{% endblock %}
+  

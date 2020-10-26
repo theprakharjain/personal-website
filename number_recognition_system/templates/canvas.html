@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/styles1.css" />
+</head>
+
+<body>
+
+  <!-- --------------------------- Navbar Initiation ---------------------------------- -->
+
+  <nav id="navbar" class="col-12">
+
+    <div class="col-3"></div>
+
+    <div id="div_head" class="col-6">
+      <h2 id="nav_head">OBJECT RECOGNITION SYSTEM
+      </h2>
+    </div>
+
+    <div class="col-3" style="padding: 0px; text-align: center;">
+
+      <div id="div_home">
+        <button><a href="/">Home</a></button>
+      </div>
+
+      <div id="div_portfolio">
+        <button><a href="/portfolio">Portfolio</a></button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- --------------------------- Navbar Completion ---------------------------------- -->
+
+  <!-- --------------------------- Row-1 Initiation ---------------------------------- -->
+
+  <div class="row" id="row-1">
+
+    <!-- --------------------------- Left Section Initiation ---------------------------------- -->
+
+    <div class="col-6 col-s-6">
+
+      <canvas id="canvas" onmousemove="showCoords(event)" onmouseout="clearCoor()">
+      </canvas>
+
+      <div id="buttons">
+        <!-- ----------------------------  Canvas Picture Link Form ------------------------------------ -->
+        <div class="inner_btn">
+          <form action="predict" method="POST" id="image" name="image">
+
+            <input type="text" id="link" name="link"> <br>
+            <input type="submit" value="Predict" id="submit_link" onclick="link_send()">
+
+          </form>
+        </div>
+        <!-- -------------------------------------------------------------------------------------------- -->
+
+        <div class="inner_btn">
+          <button type="submit" id="downloadbtn">
+            <a href="#" id="downloader" name="download" onclick="downloaded()" download="image.jpeg">Download Image</a>
+          </button>
+        </div>
+        <div class="inner_btn">
+          <button type="reset" id="resetbtn" >
+            <a href="http://prakharjain.org/nrs/" id="refresh">Refresh</a>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- --------------------------- Left Section Completion ---------------------------------- -->
+
+    <!-- --------------------------- Right Section Initiation ---------------------------------- -->
+
+
+    <div class="col-6 col-s-6">
+      <!-------------- Dog Preloader Inintiation ------------->
+      <div class="loading" id="loader" style="visibility: hidden;">
+              <div class="loading__dog">
+                <div class="mechones">
+                  <div class="mechon"></div>
+                  <div class="mechon"></div>
+                </div>
+                <div class="cabeza">
+                  <div class="cabeza__bg">
+                    <div class="cabeza__mancha"></div>
+                  </div>
+                  <div class="cabeza__bg"></div>
+                  <div class="cabeza__bg"></div>
+                  <div class="cabeza__ojos">
+                    <div class="cabeza__ojo">
+                      <div class="cabeza__retina"></div>
+                    </div>
+                    <div class="cabeza__ojo">
+                      <div class="cabeza__retina"></div>
+                    </div>
+                  </div>
+                  <div class="cabeza__nariz">
+                    <div class="cabeza__bgnariz"></div>
+                    <div class="cabeza__bgnariz"></div>
+                    <div class="cabeza__bgnariz"></div>
+                    <div class="cabeza__bgnariz"></div>
+                    <div class="cabeza__bgnariz"></div>
+                  </div>
+                </div>
+                <div class="lengua"></div>
+                <div class="orejas">
+                  <div class="oreja">
+                    <div class="oreja__entrada"></div>
+                    <div class="oreja__salida"></div>
+                  </div>
+                  <div class="oreja">
+                    <div class="oreja__entrada"></div>
+                    <div class="oreja__salida"></div>
+                  </div>
+                </div>
+                <div class="cuerpo">
+                  <div class="cuerpo__cuello">
+                  </div>
+                  <div class="cuerpo__nuca"></div>
+                  <div class="cuerpo__espalda"></div>
+                  <div class="cuerpo__patatrasera"></div>
+                  <div class="cuerpo__panza"></div>
+                  <div class="cuerpo__pecho"></div>
+                  <div class="cuerpo__patita"></div>
+                  <div class="cuerpo__cola"></div>
+                </div>
+              </div>
+            </div>
+
+      <!-------------- Dog Preloader Completion ------------->
+
+
+      <!-------------- Loader Text ------------->
+      <h4 id="loader_text" class="glowBtn" style="visibility: hidden;">Machine is Learning...
+      </h4>
+      <!-------------- Mouse Position ------------->
+      <p id="mousepos" style="visibility: hidden;"></p>
+
+      <!----------------------------------- Prediction Text ----------------------------------->
+
+      <h1 id="answer"><b>{{prediction_text}}</b></h1>
+      <!--{{prediction_text}}-->
+
+
+    </div>
+
+    <!-- --------------------------- Right Section Completion ---------------------------------- -->
+
+
+
+  </div>
+
+  <!-- --------------------------- Row-1 Completion ---------------------------------- -->
+
+
+
+
+  <script src="static/js/script.js"></script>
+</body>
+
+</html>

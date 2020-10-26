@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+
+{% block head %}
+<title>Home</title>
+{% endblock %} 
+
+{% block body %}
+<br>
+<h1>Home Page with template and jinja</h1>
+<br>
+<br>
+
+<!--***********************  Description of Project  *************************** -->
+
+<main role="main">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>Welcome</h1>
+            <p>This project is made with the Flask framework using python programming language. It also shows the execution of CRUD operations with the help SQLAlchemy library and sqlite database. The code primarily shows the use of <code>flask and python</code> in the website development</p>
+            <p>You can see my other projects at my <a href="https://github.com/theprakharjain">github</a> page.</p>
+            <p>
+                <a class="btn btn-primary" href="/posts" role="button">View posts
+                    &raquo;</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+<!--***********************  Description of Project  *************************** -->
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "projects_intro_html/base_intro_proj.html" %}
+
+{% block body %}
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Blog Post</h1>
+        <p>
+            <a href="{{ url_for('home_route') }}">Home</a> /
+            <a href="{{ url_for('portfolio_route') }}">portfolio</a> / Blog Post
+        </p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="../../static/img/gif/blog2.gif" alt="" class="img-responsive" height="150" width="150" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Blog Post</h3>
+            <h5>Flask Framework</h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <p>
+                The Project is developed using the Flask Framework. The backend is developed in the python language. The project uses SQLite for the database. Bootstrap framework is used for the designing.
+            </p>
+
+            <p>
+                The project is a web appplication that lets the user write a blog and gives the facility to edit and delete the same.
+            </p>
+
+            <a href="http://127.0.0.1:5000/" class="a_view_live" target="_blank"><em class="view_live"><b>View Live</b></em>
+            </a>
+            <a href="#" class="a_view_live" target="_blank"><em class="view_live" ><b>View Code</b></em>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Python</li>
+                <li>
+                    <i class="ion-ios-circle-filled"></i> Flask
+                </li>
+                <li><i class="ion-ios-circle-filled"></i> SQLite</li>
+                <li><i class="ion-ios-circle-filled"></i> Bootstrap</li>
+                <li>
+                <li><i class="ion-ios-circle-filled"></i> HTML | CSS | Javascript</li>
+            </ul>
+
+{% endblock %}

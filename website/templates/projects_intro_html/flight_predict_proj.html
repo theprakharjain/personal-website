@@ -1,0 +1,62 @@
+{% extends "projects_intro_html/base_intro_proj.html" %}
+
+{% block body %}
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Flight Fare Prediction</h1>
+        <p>
+            <a href="{{ url_for('home_route') }}">Home</a> /
+            <a href="{{ url_for('portfolio_route') }}">portfolio</a> / Flight Fare Prediction
+        </p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="../../static/img/gif/airplane.gif" alt="" class="img-responsive" height="150" width="150" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Flight Fare Prediction</h3>
+            <h5>Random Forest Regression</h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <p>
+                The Project is developed over the 10000 flights fare dataset. The flights are between the metro cities.
+                The project was developed by using one of the core machine learning algorithm- "Random Forest Regression".
+                Lots of feature engineering concepts were involved in reaching to the final datapoint. Methods like One Hot Encoding, Ordinal Encoding, date time bifurcations were used in the project. Hyperparameter tuning was also performed to improve the accuracy.
+            </p>
+
+            <p>
+                The project is a web appplication that predicts the price on the flights.
+            </p>
+
+            <a href="http://prakharjain.org/flight/" class="a_view_live" target="_blank"><em class="view_live"><b>View Live</b></em>
+            </a>
+            <a href="#" class="a_view_live" target="_blank"><em class="view_live"><b>View Code</b></em>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Machine Learning</li>
+                <li>
+                    <i class="ion-ios-circle-filled"></i> Random Forest Regression
+                </li>
+                <li><i class="ion-ios-circle-filled"></i> Exploratory Data Analysis</li>
+                <li><i class="ion-ios-circle-filled"></i> Feature Engineering</li>
+                <li><i class="ion-ios-circle-filled"></i> Feature Selection</li>
+                <li><i class="ion-ios-circle-filled"></i> Python | Flask</li>
+                <li>
+                    <i class="ion-ios-circle-filled"></i> Pandas | Numpy 
+                </li>
+                <li><i class="ion-ios-circle-filled"></i> Matplotlib | Seaborn</li>
+                <li><i class="ion-ios-circle-filled"></i> HTML | CSS | Javascript</li>
+            </ul>
+
+{% endblock %}

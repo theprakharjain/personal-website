@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--****************************** bootstrap CSS Link **************************************-->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!--****************************** Local CSS Link **************************************-->
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+
+  <body>
+    <!--****************************** Nav Bar **************************************-->
+    <nav class="navbar navbar-dark bg-dark" > <!--  style="background-color: #c78117;"-->
+      <a class="navbar-brand" href="/" >Flight Fare Prediction Model</a>
+      <div id="div_home">
+        <button><a href="/">Home</a></button>
+      </div>
+      
+      <div id="div_portfolio">
+        <button><a href="/portfolio">Portfolio</a></button>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <!--********************************************************************-->
+
+    <!--********************************* Form ***********************************-->
+    <form class="container" action="/predict" method="POST">
+      <div class="row">
+        <!--************************ Departure Date **********************************-->
+        <div class="col-md-6">
+          <label for="dep_time">Departure Time of Flight</label>
+          <input
+            class="form-control"
+            type="datetime-local"
+            id="dep_time"
+            name="dep_time"
+          />
+        </div>
+        <!-- <br /> -->
+        <!--********************** Arrival Time **************************************-->
+        <div class="col-md-6">
+          <label for="arrival_time">Landing Time of Flight</label>
+          <input
+            class="form-control"
+            type="datetime-local"
+            id="arrival_time"
+            name="arrival_time"
+          />
+        </div>
+      </div>
+      <br />
+
+      <!--************************ Source ************************************-->
+      <div class="row">
+        <div class="col-md-6">
+          <label for="source">Source</label>
+          <select class="form-control" id="source" name="source">
+            <option value="delhi">Delhi</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="chennai">Chennai</option>
+          </select>
+        </div>
+        <br />
+        <!--*********************** Destination ********************************-->
+        <div class="col-md-6">
+          <label for="destination">Destination</label>
+          <select class="form-control" id="destination" name="destination">
+            <option value="cochin">Cochin</option>
+            <option value="delhi">Delhi</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="kolkata">Kolkata</option>
+          </select>
+        </div>
+      </div>
+      <br />
+      <!--************************* Stoppage *******************************-->
+      <div class="row">
+        <div class="col-md-6">
+          <label for="stops">Stoppage</label>
+          <select class="form-control" id="stops" name="stops">
+            <option value="0">Non-Stop</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <br />
+        <!--************************ Airline ************************************-->
+        <div class="col-md-6">
+          <label for="airline">Airline</label>
+          <select class="form-control" id="airline" name="airline">
+            <option value="Jet Airways">Jet Airways</option>
+            <option value="IndiGo">IndiGo</option>
+            <option value="Air India">Air India</option>
+            <option value="Mutiple Carriers">Mutiple Carriers</option>
+            <option value="Spice Jet">Spice Jet</option>
+            <option value="Vistara">Vistara</option>
+            <option value="Go Air">Go Air</option>
+            <option value="Multiple Carriers Premium Economy">
+              Multiple Carriers Premium Economy
+            </option>
+            <option value="Jet Airways Business">Jet Airways Business</option>
+            <option value="Vistara Premium Economy">
+              Vistara Premium Economy
+            </option>
+            <option value="Tru Jet">Tru Jet</option>
+          </select>
+          <br />
+        </div>
+      </div>
+      <br />
+      <!-- ************************* Submit and Refresh Buttons  ************************** -->
+      <div class="text-center">
+        <button class="btn btn-success" type="submit">Submit</button>
+        <a class="btn btn-primary" href="http://prakharjain.org/flight/" style="margin-left: 15px"
+          >Refresh</a
+        >
+      </div>
+    </form>
+    <br />
+    <br />
+    <br />
+
+    <!-- ************************* Prediction Text  ************************** -->
+
+    <!-- <div class="text-center">
+      <button class="btn btn-info col-md-6" style="color: white">
+        <h3></h3><b>{{ prediction_text }}</b></h3>
+      </button>
+    </div> -->
+  </body>
+</html>

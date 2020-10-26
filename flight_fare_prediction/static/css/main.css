@@ -1,0 +1,55 @@
+#div_home {
+  display: inline-block;
+  margin-left: 990px;
+}
+
+#div_portfolio {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#div_home > button {
+  background-color: #a1ca31;
+  color: white;
+  font-size: 15px;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid white;
+}
+
+#div_home > button:hover {
+  background-color: #c78117;
+  /* box-shadow: 0 0 10px #2ba805; */
+  box-shadow: 6px 3px 6px rgb(51, 50, 50);
+}
+
+#div_portfolio > button {
+  background-color: #f03f83;
+  color: white;
+  font-size: 15px;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid white;
+}
+
+#div_portfolio > button:hover {
+  background-color: #c78117;
+  /* box-shadow: 0 0 10px #2ba805; */
+  box-shadow: 6px 3px 6px rgb(51, 50, 50);
+}
+
+#div_home > button > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#div_portfolio > button > a {
+  text-decoration: none;
+  color: #ffffff;
+}

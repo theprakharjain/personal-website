@@ -1,0 +1,51 @@
+{% extends "projects_intro_html/base_intro_proj.html" %}
+
+{% block body %}
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Space Invaders</h1>
+        <p>
+            <a href="{{ url_for('home_route') }}">Home</a> /
+            <a href="{{ url_for('portfolio_route') }}">portfolio</a> / Space Invaders Game
+        </p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="../../static/img/gif/airplane2.gif" alt="" class="img-responsive" height="150" width="150" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Space Invaders Game</h3>
+            <h5>PyGame</h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <p>
+                The Project is developed by using PyGame Library. The applications runs on the desktop.
+            </p>
+
+            <p>
+                The project is a desktop appplication that lets the user play the game and kills the space aliens.
+            </p>
+
+            <a href="static/docs/Prakhar Jain- Resume.pdf" class="a_view_live" target="_blank"><em class="view_live" download><b>Download</b></em>
+            </a>
+            <a href="#" class="a_view_live" target="_blank"><em class="view_live"><b>View Code</b></em>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> PyGame</li>
+                <li>
+                    <i class="ion-ios-circle-filled"></i> Python
+                </li>
+            </ul>
+
+{% endblock %}
