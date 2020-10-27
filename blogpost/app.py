@@ -91,3 +91,57 @@ def edit(id):
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
+
+    
+
+# ###################################################################################################### Extra Commands for future use ########
+
+# APP ROUTE FOR THE AUTOMATIC FORM SUBMISSION AND DATABASE DELETION
+
+# @app.route("/timeout", methods = ["GET", "POST"])
+# def db_delete():
+#     all_data = BlogPost.query.filter_by(title = BlogPost.title).all()
+
+#     print(all_data)
+#     for data in all_data:
+#         print(data)
+#         db.session.delete(data)
+#         db.session.commit()
+#     return redirect("/posts")
+
+# FUNCTION FOR THE FUNCTION RUN BY THREAD CREATION ON SET TIME INTERVAL AND DELETION OF DATABASE
+
+# def delete_db():
+#     print ("hello, world")
+#     all_data = BlogPost.query.filter_by(title = BlogPost.title).all()
+
+#     x = datetime.now().strftime('%H')
+
+#     if (x == 15):
+#         print(all_data)
+#         for data in all_data:
+#             print(data)
+    # db.session.delete(data)
+    # db.session.commit()
+
+    # Timer(30.0, delete_db).start()
+
+    # print(x)
+    # '%H:%M:%S %Y-%m-%d'
+
+# Timer(30.0, delete_db).start() # after 30 seconds, "hello, world" will be printed
+
+# FUNCTION TO RUN APP WITHOUR REQUEST ROUTE
+
+# def send_time():
+#     x = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    # with app.app_context() , app.test_request_context():
+    #     url = url_for('index')
+    #     context = {'time': x}
+    #     print(x)
+    #     return render_template('index.html', time_now = x)
+    # return render_template("posts.html", time=x)
+
+# send_time()
+
+##########################################################################################################
