@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -72,7 +72,7 @@ def delete(id):
     db.session.commit()
     return redirect("/posts")
 
-# Handling Post Delete Route
+# Handling Post Edit Route
 
 
 @app.route("/posts/edit/<int:id>", methods=["GET", "POST"])
@@ -92,7 +92,6 @@ def edit(id):
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
 
-    
 
 # ###################################################################################################### Extra Commands for future use ########
 

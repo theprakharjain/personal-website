@@ -11,7 +11,7 @@
 <hr>
 
 <h2> Edit Blog Post</h2>
-<form action="/posts/edit/{{var_post.id}}" method="POST">
+<form action="{{url_for('edit', id = var_post.id)}}" method="POST"> <!-- "/posts/edit/{{var_post.id}}" -->
     <label for="title">Title:</label>
     <input class="form-control" type="text" name="title" id="title" value = "{{var_post.title}}" onfocus="this.value = ''">
     <br>
@@ -24,5 +24,7 @@
     <input class = "btn btn-success" type="submit" value="Save">
 </form>
 <hr>
+
+
 
 {% endblock %}

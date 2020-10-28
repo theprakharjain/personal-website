@@ -10,7 +10,7 @@
 <hr>
 
 <h2> Create New Blog Post</h2>
-<form action="/posts" method="POST">
+<form action="{{url_for ('posts')}}" method="POST">
     <label for="title">Title:</label>
     <input class="form-control" type="text" name="title" id="title" placeholder="Enter Title" aria-label="Enter Title">
     <br>
