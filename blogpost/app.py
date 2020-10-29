@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, current_app
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///posts.db"
 db = SQLAlchemy(app)
+
+# app.config['SERVER_NAME'] = 'prakharjain.org'
 
 # Database Model
 
@@ -90,7 +92,7 @@ def edit(id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0", port=5000)  # , host="0.0.0.0"
 
 
 # ###################################################################################################### Extra Commands for future use ########

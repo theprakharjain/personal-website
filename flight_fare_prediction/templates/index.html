@@ -19,22 +19,44 @@
 
   <body>
     <!--****************************** Nav Bar **************************************-->
-    <nav class="navbar navbar-dark bg-dark" > <!--  style="background-color: #c78117;"-->
-      <a class="navbar-brand" href="/" >Flight Fare Prediction Model</a>
-      <div id="div_home">
-        <button><a href="/">Home</a></button>
-      </div>
-      
-      <div id="div_portfolio">
-        <button><a href="/portfolio">Portfolio</a></button>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/flight/">Flight Fare Prediction Model</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+        aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Contact us</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Website</a>
+              <a class="dropdown-item" href="#">Youtube</a>
+              <a class="dropdown-item" href="#">Instagram</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form>
       </div>
     </nav>
+
     <br />
     <br />
     <!--********************************************************************-->
 
     <!--********************************* Form ***********************************-->
-    <form class="container" action="/predict" method="POST">
+    <form class="container" action="predict" method="POST">
       <div class="row">
         <!--************************ Departure Date **********************************-->
         <div class="col-md-6">
@@ -139,5 +161,16 @@
         <h3></h3><b>{{ prediction_text }}</b></h3>
       </button>
     </div> -->
+
+    <!-- BOOTSTRAP JAVASCRIPT CDN -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- ------------------------ -->
   </body>
 </html>

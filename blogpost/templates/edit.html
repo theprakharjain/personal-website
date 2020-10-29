@@ -11,7 +11,15 @@
 <hr>
 
 <h2> Edit Blog Post</h2>
-<form action="/posts/edit/{{var_post.id}}" method="POST"> <!-- {{url_for('edit', id = var_post.id)}} -->
+<form action="" method="POST">
+
+    <!--
+    1. posts/edit/{{var_post.id}} , 
+    2. {{url_for('edit', id = var_post.id)}}, 
+    3. {{url_for('edit', id = var_post.id, _external = True)}} #"_external = true" directly redirects the action url to the base route, in our case it is localhost:5000 on the local serber but on the server also it is redirecting to the localhost, thus it is creating a problem #     
+    4. COMMENT- The URL field is left blank as the route for submission and route which redirected to the page is same
+    -->
+    
     <label for="title">Title:</label>
     <input class="form-control" type="text" name="title" id="title" value = "{{var_post.title}}" onfocus="this.value = ''">
     <br>
