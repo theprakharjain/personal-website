@@ -25,6 +25,11 @@ def portfolio_route():
 def contact_route():
     return render_template("contact.html")
 
+@app.route("/404")
+# @cross_origin()
+def error_route():
+    return render_template("404.html")
+
 # ##################################  /MAIN HTML ROUTES/ ##############################################
 
 # ##################################  PROJECT HTML ROUTES ##############################################

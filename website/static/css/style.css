@@ -1276,6 +1276,11 @@ textarea:focus {
   .portfolio_box {
     width: 100%;
   }
+
+  #my_img {
+    width: 100%;
+    margin-left: 0;
+  }
   /*  */
 }
 
