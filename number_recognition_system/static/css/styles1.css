@@ -698,7 +698,7 @@ img {
 }
 
 #right_section {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -767,6 +767,10 @@ img {
     margin-left: 0px;
     margin-top: 0px;
     width: 100%;
+  }
+
+  #right_section {
+  display: block;
   }
 }
 

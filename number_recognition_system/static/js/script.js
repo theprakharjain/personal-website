@@ -4,6 +4,16 @@ window.addEventListener("load", () => {
   // Function to check whether script is running or not
   console.log("helloooooooooo");
 
+  // Setting the value in localstorage/cookies to check whether the page is loaded for the
+  // first time or not
+  // also sends an alert if the page is loaded for the first time
+  var second_time = localStorage.getItem("first_time");
+
+  if (!second_time) {
+    localStorage.setItem("first_time", "1");
+    window.alert("This Page will not work on Touch Devices");
+  }
+
   // Setting up the 2D canavas
   // saving canvas attributes in canvas variable
   const canvas = document.querySelector("#canvas");
