@@ -698,7 +698,11 @@ img {
 }
 
 #right_section {
-  text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 991px) {
@@ -728,7 +732,7 @@ img {
     margin: 10px 0px;
     animation: mymove 3s;
     animation-fill-mode: forwards;
-}
+  }
 
   @keyframes mymove {
     from {
