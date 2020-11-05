@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
   if (!second_time) {
     localStorage.setItem("first_time", "1");
-    window.alert("This Page will not work on Touch Devices");
+    window.alert("This Project sometimes may not work on small touch devices");
   }
 
     // Making html elements ---- "loader", "loader_text", "mousepos" visible while drawing on canvas
@@ -21,6 +21,23 @@ window.addEventListener("load", () => {
 
   // calling the "inactivityTime" function
   inactivityTime();
+
+  var canvas = document.getElementById("canvas");
+  if (window.innerWidth < 500 || window.innerHeight < 500){
+        var canvas = document.getElementById("canvas");
+        var height_ratio = 1;
+        // 12px is deducted in order to remove the spacing issue in mobile site
+        // if we'll not deduct the border then canvas will take the extra space of 12px (6px of right and 6px of left)
+        // and will not fit in the mobile/tab window
+        // Another way is to set the border as none for the canvas in the media query *currently commented out*
+        canvas.width = window.innerWidth - 12;
+        canvas.height = canvas.width * height_ratio;
+        // console.log(canvas.width, canvas.height, window.innerWidth, "hua kyaaaa");
+  } else {
+      canvas.width = 500;
+      canvas.height = 500;
+    //   console.log("nai hua kyaaaa");
+  }
 
 });
 
@@ -239,3 +256,84 @@ var inactivityTime = function () {
     // 1000 milliseconds = 1 second
   }
 };
+
+
+// // To position the canvas upon the change in the size of the window
+// var positionCanvas = function(){
+//     // canvas.style.position = 'absolute';
+//     canvas.style.top = window.innerHeight / 2 - canvas.height / 2 + 'px';
+//     canvas.style.left = window.innerWidth / 2 - canvas.width / 2 + 'px';
+// };
+ 
+// // attach position canvas method to window resize event
+// window.addEventListener('resize', positionCanvas);
+// // call it for the first time
+// positionCanvas();
+
+// function resize () {
+//     var canvas = document.getElementById("canvas");
+//     var canvasRatio = canvas.height /canvas.width;
+//     var windowsRatio = window.innerHeight / window.innerWidth;
+//     var width;
+//     var height;
+
+//     if (windowsRatio < canvasRatio){
+//         height = window.innerHeight;
+//         width = height / canvasRatio;
+//     } else {
+//         width = window.innerWidth;
+//         height = width * canvasRatio;
+//     }
+
+//     canvas.style.width = width + "px";
+//     canvas.style.height = height + "px";
+
+// }
+
+// window.addEventListener("resize", resize, false);
+
+
+// function resize () {
+//     var canvas = document.getElementById("canvas");
+
+//     if (canvas.width > window.innerWidth){
+//         canvas.width = window.innerWidth;
+//     } else {
+//         canvas.width = 500 + "px";
+//     }
+//     if (canvas.height > window.innerHeight){
+//         canvas.height = window.innerHeight;
+//     } else {
+//         canvas.height = "500px";
+//     }
+// }
+
+// window.addEventListener("resize", resize);
+
+
+
+// function resize () {
+//     var canvas = document.getElementById("canvas");
+
+//     if (window.innerWidth < "500px" || window.innerHeight < "500px"){
+//         var height_ratio = 1;
+//         canvas.width = window.innerWidth;
+//         canvas.height = canvas.width * height_ratio;
+//         console.log("hua kyaaaa");
+//     }
+
+//     // var height_ratio = 1;
+
+//     // canvas.height = canvas.width * height_ratio;
+// }
+
+// window.addEventListener("resize", resize);
+
+
+// if (window.innerWidth < "500" || window.innerHeight < "500"){
+//         var canvas = document.getElementById("canvas");
+//         var height_ratio = 1;
+//         canvas.width = window.innerWidth;
+//         canvas.height = canvas.width * height_ratio;
+//         console.log("hua kyaaaa");
+//     }
