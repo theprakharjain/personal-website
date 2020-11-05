@@ -147,20 +147,17 @@ body {
   }
 }
 
-#loader {
-  /* position: absolute;
-  top: 37%;
-  left: 72%;
-  transform: translate(-50%, -50%); */
-}
-
 #loader_text {
-  /* position: absolute;
-  top: 58%;
-  left: 72%;
-  transform: translate(-50%, -50%); */
   font-size: 30px;
   color: #1b76ff;
+}
+
+#instruction {
+  color: #c78117;
+}
+
+#instruction span {
+  color: #2ba805;
 }
 
 /* ---------------- Custom Grids ---------------------*/
@@ -705,6 +702,8 @@ img {
   justify-content: center;
 }
 
+/* ------------------------------------ MEDIA QUERIES ---------------------------------------- */
+
 @media only screen and (max-width: 991px) {
   img {
     max-width: 100%;
@@ -770,7 +769,7 @@ img {
   }
 
   #right_section {
-  display: block;
+    display: block;
   }
 }
 

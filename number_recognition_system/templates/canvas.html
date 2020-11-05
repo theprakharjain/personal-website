@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="static/css/styles1.css" />
 </head>
 
-<body>
+<body onload="init()">
 
   <!-- --------------------------- Navbar Initiation ---------------------------------- -->
 
@@ -44,7 +44,7 @@
 
     <div class="col-6 col-s-6">
 
-      <canvas id="canvas" onmousemove="showCoords(event)" onmouseout="clearCoor()">
+      <canvas id="canvas" height="500" width="500" onmousemove="showCoords(event)" onmouseout="clearCoor()">
       </canvas>
 
       <div id="buttons">
@@ -141,8 +141,15 @@
 
 
       <!-------------- Loader Text ------------->
-      <h4 id="loader_text" class="glowBtn" style="visibility: hidden;">Machine is Learning...
+      <h4 id="loader_text" style="visibility: hidden;">
+        Machine is Learning... <br>
       </h4>
+
+      <!-- Instruction -->
+      <p id="instruction">
+        Press <span> "Predict" </span>  button after drawing the number <span> between 0-9 </span> <br> <br>
+      </p>
+
       <!-------------- Mouse Position ------------->
       <p id="mousepos" style="visibility: hidden;"></p>
       
@@ -157,7 +164,8 @@
 
 
 
-  <script src="static/js/script.js"></script>
+  <!-- <script src="static/js/script.js"></script> -->
+  <script src="static/js/script-2.js"></script>
 </body>
 
 </html>
