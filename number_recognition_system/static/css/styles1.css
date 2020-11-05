@@ -103,7 +103,7 @@ body {
 
 #canvas {
   /* border: 5px solid #000000; */
-  border: 6px ridge #ffbf00; /*Border does not comes in the image sent to model, Model will remain unaffected*/
+  border: 6px ridge #ffbf00; /* Border does not comes in the image sent to model, Model will remain unaffected */
   background-color: #000000;
   margin-left: 25px;
   margin-top: 25px;
