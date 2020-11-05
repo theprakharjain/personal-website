@@ -22,6 +22,9 @@ window.addEventListener("load", () => {
   // calling the "inactivityTime" function
   inactivityTime();
 
+// Sets the responsiveness to the canvas
+// Gives the prediction in the alert box on small screen
+// for the improve visibility on small screens
   var canvas = document.getElementById("canvas");
   if (window.innerWidth < 500 || window.innerHeight < 500){
         var canvas = document.getElementById("canvas");
@@ -33,11 +36,20 @@ window.addEventListener("load", () => {
         canvas.width = window.innerWidth - 12;
         canvas.height = canvas.width * height_ratio;
         // console.log(canvas.width, canvas.height, window.innerWidth, "hua kyaaaa");
+
+        // Sets the prediction display as none and
+        // transfers the value of prediction to the alert box and displays it
+        var answer = document.getElementById("answer");
+        answer.style.display = "none";
+
+        window.confirm(answer.textContent);
+
   } else {
       canvas.width = 500;
       canvas.height = 500;
     //   console.log("nai hua kyaaaa");
   }
+
 
 });
 
