@@ -42,7 +42,20 @@ window.addEventListener("load", () => {
         var answer = document.getElementById("answer");
         answer.style.display = "none";
 
-        window.confirm(answer.textContent);
+        if(document.getElementById("answer_small").textContent != ""){
+            // Sets the display of modal as block from the none value
+            document.getElementById("myModal").style.display = "block";
+        }
+        
+
+        // Removes the display of modal when click on the close
+        span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+        // Alert box with the prediction answer
+
+        // window.confirm(answer.textContent);
 
   } else {
       canvas.width = 500;
@@ -269,6 +282,24 @@ var inactivityTime = function () {
   }
 };
 
+// --------------------------------------- MODAL INITIATION ---------------------------------------------------
+
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// --------------------------------------- MODAL COMPLETION ---------------------------------------------------
+
+
+
 
 // // To position the canvas upon the change in the size of the window
 // var positionCanvas = function(){
@@ -349,3 +380,4 @@ var inactivityTime = function () {
 //         canvas.height = canvas.width * height_ratio;
 //         console.log("hua kyaaaa");
 //     }
+

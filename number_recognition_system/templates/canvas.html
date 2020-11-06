@@ -83,6 +83,26 @@
       <h1 id="answer"><b>{{prediction_text}}</b></h1>
       <!--{{prediction_text}}-->
 
+      <!-- -------------------------------- MODAL INITIATION FOR SMALL SCREENS --------------------------------------------- -->
+      <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>ANSWER</h2>
+          </div>
+          <div class="modal-body">
+            <h2 id= "answer_small" style="color: black; padding: 20px;"><b>{{prediction_text}}</b></h2>
+          </div>
+          <div class="modal-footer">
+            <!-- <h3>Modal Footer</h3> -->
+          </div>
+        </div>
+      
+      </div>
+      <!-- -------------------------------- MODAL COMPLETION FOR SMALL SCREENS --------------------------------------------- -->
+
       <!-------------- Dog Preloader Inintiation ------------->
       <div class="loading" id="loader" style="visibility: hidden;">
               <div class="loading__dog">
