@@ -1,4 +1,4 @@
-// The functions which run windows load event
+//-------------------------- The functions which run windows load event ----------------------------------------------
 
 window.addEventListener("load", () => {
   // Function to check whether script is running or not
@@ -66,9 +66,9 @@ window.addEventListener("load", () => {
 
 });
 
+// ----------------------------------- COMPLETION OF WINDOW LOAD FUNCTIONS ----------------------------------------------
 
-
-// ---------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------- CANVAS INITIATION --------------------------------------------------------
 
 // Variables for referencing the canvas and 2dcanvas context
 var canvas, ctx;
@@ -204,7 +204,9 @@ function init() {
 }
 
 
-// ------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------ CANVAS COMPLETION ------------------------------------------------------------
+
+// ---------------------------------------- OTHER IMPORTANT FUNCTIONS INITIATION -------------------------------------------
 
 // Function to show mouse coordinates on screen
 function showCoords(event) {
@@ -281,6 +283,8 @@ var inactivityTime = function () {
     // 1000 milliseconds = 1 second
   }
 };
+
+// ---------------------------------------- OTHER IMPORTANT FUNCTIONS COMPLETION -------------------------------------------
 
 // --------------------------------------- MODAL INITIATION ---------------------------------------------------
 
